@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+
+class Crowbar:
+	def __init__(self):
+		self.name = "Crowbar"
+		self.description = "A normal crowbar. Great for  				knocking people out."
+		self.damage = 10
+
+	def __str__(self):
+		return self.name
+
+class Axe:
+	def __init__(self):
+		self.name = "Axe"
+		self.descrption = "An axe. Blade is slightly blunt." 
+		self.damage = 15
+
+	def __str__(self):
+		return self.name
+
+class Knife:
+	def __init__(self):
+		self.name = "Knife"
+		self.description = "A very sharp knife."
+		self.damage = 20
+
+	def __str__(self):
+		return self.name
+
+def play():
+	inventory = [Knife()]
+	print("Defeat the enemy and escape the maze")
+	
