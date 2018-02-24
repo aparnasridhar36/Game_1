@@ -3,7 +3,7 @@
 class Crowbar:
 	def __init__(self):
 		self.name = "Crowbar"
-		self.description = "A normal crowbar. Great for  				knocking people out."
+		self.description = "A normal crowbar. Great for knocking people out."
 		self.damage = 10
 
 	def __str__(self):
