@@ -31,7 +31,7 @@ class MapTile:
 		for enemy in self.enemies:
 			if (enemy.direction):
 				if(enemy.direction not in directions_blocked):
-					directions_blocked.append(enemy.direction)
+					directions_blocked.append(enemy.direction) 
 			text += " " + enemy.check_text()
 		for barrier in self.barriers:
 			if (barrier.direction):
