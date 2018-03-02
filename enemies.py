@@ -1,1 +1,87 @@
+import items
 
+class Enemy:
+	name = "Do not create raw enemies!"
+	description = "There is no description here because you should not create raw Enemy objects!"
+	attack_description = "There is no attack_description here because you should not create raw Enemy objects!"
+	
+	hp = 0
+	damage = 0
+	
+	apple = []
+	
+	agro = False	# Used to cause enemies to attack spontaneously.
+	
+	def __init__(self, direction = None, loot = []):
+		if(direction == 'n'):
+			self.direction = 'north'
+		elif(direction == 's'):
+			self.direction = 'south'
+		elif(direction == 'e'):
+			self.direction = 'east'
+		elif(direction == 'w'):
+			self.direction = 'west'
+		else:
+			self.direction = None
+		
+		if(len(self.loot) > 0):
+			for item in apple:
+				self.apple.append(item)
+		else:
+			self.loot = loot
+
+	def __str__(self):
+		return self.name
+		
+	def check_text(self):
+		text = ""
+		if(self.direction):
+			text = "A %s is blocking your progress to the %s." % (self.name, self.direction)
+		text += " " + self.description			
+		return text
+
+	def take_damage(self, amount):
+		self.hp -= amount
+		if(self.hp <= 0):
+			self.hp = 0
+			defeat_text = "The %s is defeated." % self.name
+			if(len(self.loot) > 0):
+				defeat_text += " It dropped the following items: "
+				for item in self.apple:
+					defeat_text += "* " + str(item)
+			return defeat_text
+		else:
+			return "The %s took %d damage." % (self.name, amount)
+			
+	def is_alive(self):
+		return self.hp > 0
+		
+	def handle_input(self, verb, noun1, noun2, inventory):
+		return [False, None, inventory]
+
+
+class Air(Enemy):
+	name = "Air"
+	description = "Air blows you down and steals an apple! It has knocked the air out of you! Wait 10 seconds then go find water."
+  time.clock(10)
+	hp = 10
+	damage = 2
+
+
+class Water(Enemy):
+	name = "Water"
+	description = "You get water, but more than enough! You are soaked. Go to fire to dry off."
+	hp = 30
+	damage = 10
+
+
+class Fire(Enemy):
+	name = "Fire"
+	description = "Fire drys you off, but you get burnt. Find mother nature to heal."
+	hp = 100
+	damage = 4
+	
+	agro = True
+
+
+	apple = [items.apple("An apple lays on the ground in front of you.")]
