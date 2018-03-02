@@ -200,7 +200,7 @@ class BoringTile(MapTile):
 	
 		
 class FireElement(MapTile):
-	items = [items.Apple("Collect apples if you come across them. You will need a minimum number of apples to earn the healing power of mother nature")]
+	items = [items.apple ("Collect apples if you come across them. You will need a minimum number of apples to earn the healing power of mother nature")]
 	description = """You have entered the fire element! Don't get burt!"""
 		
 class WaterElement(MapTile):

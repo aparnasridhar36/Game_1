@@ -2,7 +2,7 @@ from formattext import *				# Import some important functions for formatting tex
 
 
 from player import Player
-from world2 import World
+from world import World
 import parse
 
 debug_mode = True	# Use this to toggle verbose mode on the text parser.

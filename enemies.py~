@@ -84,4 +84,4 @@ class Fire(Enemy):
 	agro = True
 
 
-	loot = [items.Apple("An apple lays on the ground in front of you.")]
+	loot = [items.apple("An apple lays on the ground in front of you.")]
