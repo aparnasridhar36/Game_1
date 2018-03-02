@@ -5,7 +5,9 @@ class MapTile:
 	
 	def intro_text(self):
 		raise NotImplementedError("Create a subclass instead!")
-
+	description = "Do not create raw MapTiles! Create a subclass instead!"
+	enemies = []
+	items = []
 
 class StartTile(MapTile):
 	def intro_text(self):
