@@ -48,11 +48,11 @@ class SecretTile(MapTile):
 		
 class World:									# I choose to define the world as a class. This makes it more straightforward to import into the game.
 	map = [
-		[None,							None, 							FireElementTileTile(), 			None					None],
+		[None,							None, 							FireElementTileTile(), 				None					None],
 		[None,							None, 							BoringTile(), 					None					None],
-		[EarthElementTile(),			BoringTile(), 					StartTile(), 					BoringTile(), 			AirElementTile()],
+		[EarthElementTile(),				BoringTile(), 							StartTile(), 					BoringTile(), 				AirElementTile()],
 		[None,							None, 							BoringTile(), 					None					None],
-		[SecretTile(),					BoringTile(), 					WaterElementTile() 				None					None]
+		[SecretTile(),					BoringTile(), 							WaterElementTile() 				None					None]
 	]
 	
 	def __init__(self):
