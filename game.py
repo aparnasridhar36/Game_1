@@ -1,3 +1,6 @@
+from player import Player
+from world2 import World
+
 player = Player()
 world = World()
 	
