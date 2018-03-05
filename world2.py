@@ -197,6 +197,7 @@ class BoringTile(MapTile):
 				if(barrier.direction not in directions_blocked):
 					if(barrier.verbose):
 						text += " " + barrier.description()
+		return text
 	
 		
 class FireElement(MapTile):
