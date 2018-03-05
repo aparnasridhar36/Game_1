@@ -49,7 +49,7 @@ class WoodenDoor(Barrier):
 					self.state = 'open'
 					self.passable = True
 					return [True, "You tug on the handle, and the wooden door creaks open.", inventory]
-				else:
+				else: 
 					return [True, "The door is already open.", inventory]
 			if(verb == 'close'):
 				if(self.state == 'open'):
