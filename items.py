@@ -42,11 +42,11 @@ class Item:
 		return [False, None, inventory]
 		
 		
-class Iron_Key(Item):
-	name = "iron key"
+class Apple(Item):
+	name = "apple"
 	
-	description = "An old iron key. It looks like it would open a massive door."
-	dropped_description = "An old iron key is lying on the ground."		
+	description = "Just an apple."
+	dropped_description = "An apple is lying on the ground."		
 		
 		
 class Consumable(Item):
