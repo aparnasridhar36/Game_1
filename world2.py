@@ -197,6 +197,7 @@ class BoringTile(MapTile):
 				if(barrier.direction not in directions_blocked):
 					if(barrier.verbose):
 						text += " " + barrier.description()
+						
 		return text
 	
 		
@@ -218,11 +219,11 @@ class VictoryTile(MapTile):
 		
 class World:									# I choose to define the world as a class. This makes it more straightforward to import into the game.
 	map = [
-		[None,                    None,                   FireElement(),                  None,                   None,],
-		[None,                    None,                   BoringTile(),                   None,                   None,],
-		[EarthElement(),          BoringTile(),           StartTile(),                    BoringTile(),           AirElement(),],
-		[None,                    None,                   BoringTile(),                   None,                   None,],
-		[VictoryTile(),           BoringTile(),           WaterElement(),                 None,                   None,]
+		[None,                    None,                 									FireElement(),                  									None,                 										None],
+		[None,                    None,                   									BoringTile(barriers = [barriers.FireDoor('n')]),                    None,                   									None],
+		[EarthElement(),          BoringTile(barriers = [barriers.EarthDoor('w')]),          StartTile(),                    									BoringTile(barriers = [barriers.AirDoor('e')]),             AirElement()],
+		[None,                    None,                   									BoringTile(barriers = [barriers.WaterDoor('s')]),                   None,                   									None],
+		[VictoryTile(),           BoringTile(),          									WaterElement(),             									    None,                   									None]
 	]
 
 	def __init__(self):

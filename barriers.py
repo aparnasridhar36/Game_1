@@ -102,7 +102,7 @@ class FireDoor(Barrier):
 	
 	def description(self):
 		if(self.state == 'closed'):
-			return "An old wooden door blocks your path to the %s." % self.direction
+			return "A fiery door blocks your path to the %s." % self.direction
 		else:
 			return "An old wooden door lies open before you to the %s." % self.direction
 		

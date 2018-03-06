@@ -8,7 +8,7 @@ class Enemy:
 	hp = 0
 	damage = 0
 	
-	apple = []
+	loot = []
 	
 	agro = False	# Used to cause enemies to attack spontaneously.
 	
@@ -82,6 +82,5 @@ class Fire(Enemy):
 	damage = 4
 	
 	agro = True
-
 
 	loot = [items.Apple("An apple lays on the ground in front of you.")]
