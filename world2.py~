@@ -218,9 +218,9 @@ class VictoryTile(MapTile):
 class World:									# I choose to define the world as a class. This makes it more straightforward to import into the game.
 	map = [
 		[None,                    None,                   FireElement(),                  None,                   None,],
-		[None,                    None,                   BoringTile(),                   None,                   None,],
-		[EarthElement(),          BoringTile(),           StartTile(),                    BoringTile(),           AirElement(),],
-		[None,                    None,                   BoringTile(),                   None,                   None,],
+		[None,                    None,                   FireDoor(),                     None,                   None,],
+		[EarthElement(),          EarthDoor(),            StartTile(),                    AirDoor(),              AirElement(),],
+		[None,                    None,                   WaterDoor(),                    None,                   None,],
 		[VictoryTile(),           BoringTile(),           WaterElement(),                 None,                   None,]
 	]
 
